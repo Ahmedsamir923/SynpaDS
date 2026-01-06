@@ -54,5 +54,6 @@
   <ItemGroup>
     <None Include="assets\shaders\default.frag" />
     <None Include="assets\shaders\default.vert" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>
