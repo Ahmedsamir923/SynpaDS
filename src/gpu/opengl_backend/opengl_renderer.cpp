@@ -5,9 +5,9 @@
 #include <string>    // Para std::string
 
 // Vertex + Fragment shader simples
-const char* vertexShaderSrc = readFile("assets/shaders/default.vert").c_str();
+const char* vertexShaderSrc = "assets/shaders/default.vert";
 
-const char* fragmentShaderSrc = readFile("assets/shaders/default.frag").c_str();
+const char* fragmentShaderSrc = "assets/shaders/default.frag";
 
 OpenGLRenderer::OpenGLRenderer() {
     setupTexture();
@@ -105,7 +105,7 @@ void OpenGLRenderer::clear() {
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
-std::string readFile(const std::string &filePath) {
+/**std::string readFile(const std::string& filePath) {
     std::ifstream file(filePath, std::ios::in | std::ios::binary);
     if (!file.is_open()) return "";
 
@@ -115,4 +115,4 @@ std::string readFile(const std::string &filePath) {
     file.seekg(0, std::ios::beg);         
     file.read(&content[0], content.size()); 
     return content;
-}
+}*/

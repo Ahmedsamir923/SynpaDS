@@ -3,8 +3,14 @@
 #include "../gpu/gpu.h"
 #include "../gpu/gpu_renderer.h"
 #include "../gpu/opengl_backend/opengl_renderer.h"
+#include "../core/memory/memory.h"
+#include "../core/arm9/cpu.h"
 #include <cstdlib>
 #include <ctime>
+
+#define NDEBUG
+#include <cassert>
+
 
 int main() {
     // Inicializa GLFW
@@ -12,6 +18,14 @@ int main() {
         printf("Failed to initialize GLFW\n");
         return -1;
     }
+
+    Memory mem;
+
+    mem.write32(0x02000000, 0x12345678);
+    uint32_t v = mem.read32(0x02000000);
+
+    assert(v == 0x12345678);
+
 
     // Criar janela OpenGL 3.3 Core
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);

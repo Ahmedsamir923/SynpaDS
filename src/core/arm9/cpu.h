@@ -3,6 +3,7 @@
 #include <cstdio>
 #include "../memory/memory.h"
 #include "../arm9/irq.h"
+#include "../src/utils/bit_utils.h"
 
 struct CPU {
 
@@ -80,6 +81,8 @@ struct CPU {
         else {
             decodeARM(fetch32());
         }
+        for (int i = 0; i < 4; i++)
+            mem->timers[i].step(&irq, i);
     }
 
     // =================================================
@@ -275,7 +278,8 @@ struct CPU {
         uint32_t list = instr & 0xFFFF;
 
         uint32_t base = R[rn];
-        int count = __builtin_popcount(list);
+        int count = popcount(list);
+            (list);
 
         uint32_t addr = base;
         if (U) addr += P ? 4 : 0;

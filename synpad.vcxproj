@@ -21,21 +21,22 @@
   <ItemGroup>
     <ClCompile Include="src\core\arm9\cpu.h" />
     <ClCompile Include="src\core\arm9\irq.cpp" />
-    <ClCompile Include="src\core\dma\dma.cpp" />
+    <ClCompile Include="src\dma\dma.cpp" />
     <ClCompile Include="src\core\glad.c" />
-    <ClCompile Include="src\core\memory\memory.cpp" />
-    <ClCompile Include="src\core\timers\timers.cpp" />
+    <ClCompile Include="src\memory\memory.cpp" />
+    <ClCompile Include="src\timers\timer.cpp" />
     <ClCompile Include="src\core\window.cpp" />
     <ClCompile Include="src\gpu\opengl_backend\opengl_renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\core\arm9\irq.h" />
-    <ClInclude Include="src\core\dma\dma.h" />
-    <ClInclude Include="src\core\memory\memory.h" />
-    <ClInclude Include="src\core\timers\timers.h" />
+    <ClInclude Include="src\dma\dma.h" />
+    <ClInclude Include="src\memory\memory.h" />
+    <ClInclude Include="src\timers\timer.h" />
     <ClInclude Include="src\gpu\gpu.h" />
     <ClInclude Include="src\gpu\gpu_renderer.h" />
     <ClInclude Include="src\gpu\opengl_backend\opengl_renderer.h" />
+    <ClInclude Include="src\utils\bit_utils.h" />
     <ClInclude Include="third_party\glad\glad.h" />
     <ClInclude Include="third_party\GLFW\glfw3.h" />
     <ClInclude Include="third_party\GLFW\glfw3native.h" />
