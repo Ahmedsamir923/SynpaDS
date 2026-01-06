@@ -1,4 +1,5 @@
 #include "memory.h"
+#include "../arm9/irq.h"
 
 Memory::Memory() {
     memset(bios, 0, sizeof(bios));
@@ -43,6 +44,15 @@ uint16_t Memory::read16(uint32_t addr) {
 }
 
 uint32_t Memory::read32(uint32_t addr) {
+    if (addr >= 0x04000208 && addr <= 0x04000214)
+        return irq->read(addr);
+
+    if (addr >= 0x040000B0 && addr <= 0x040000DF) {
+        int id = (addr - 0x040000B0) / 12;
+        int reg = ((addr - 0x040000B0) % 12) / 4;
+        return dma.read(id, reg);
+    }
+
     return read8(addr) |
         (read8(addr + 1) << 8) |
         (read8(addr + 2) << 16) |
@@ -84,6 +94,17 @@ void Memory::write16(uint32_t addr, uint16_t v) {
 }
 
 void Memory::write32(uint32_t addr, uint32_t v) {
+    if (addr >= 0x04000208 && addr <= 0x04000214) {
+        irq->write(addr, v);
+        return;
+    }
+
+    if (addr >= 0x040000B0 && addr <= 0x040000DF) {
+        int id = (addr - 0x040000B0) / 12;
+        int reg = ((addr - 0x040000B0) % 12) / 4;
+        dma.write(id, reg, v);
+        return;
+    }
 
     // I/O registers
     if (addr == 0x04000208) { IME = v; return; }

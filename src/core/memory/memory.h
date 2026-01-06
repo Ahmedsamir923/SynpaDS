@@ -2,7 +2,11 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstring>
+
+#include "../dma/dma.h"
 #include "../timers/timers.h"
+
+struct IRQ; // forward declaration
 
 struct Memory {
 
@@ -20,8 +24,12 @@ struct Memory {
     uint32_t IF = 0;
 
     Timers timers;
+    DMA dma;
+    IRQ* irq = nullptr;
 
     Memory();
+
+    void attachIRQ(IRQ* i) { irq = i; }
 
     uint8_t  read8(uint32_t addr);
     uint16_t read16(uint32_t addr);
@@ -30,4 +38,5 @@ struct Memory {
     void write8(uint32_t addr, uint8_t v);
     void write16(uint32_t addr, uint16_t v);
     void write32(uint32_t addr, uint32_t v);
+
 };

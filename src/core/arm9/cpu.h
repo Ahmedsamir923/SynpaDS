@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <cstdio>
 #include "../memory/memory.h"
+#include "../arm9/irq.h"
 
 struct CPU {
 
@@ -11,6 +12,7 @@ struct CPU {
     uint32_t R[16];     // R0-R15
     uint32_t CPSR;      // Current Program Status Register
     Memory* mem;
+    IRQ irq;
 
     enum FLAGS {
         N = 1 << 31,
@@ -21,10 +23,13 @@ struct CPU {
     };
 
     CPU(Memory* memory) : mem(memory) {
+        irq.init(this);
+		mem->attachIRQ(&irq);
         reset();
     }
 
     void reset() {
+        irq.reset();
         for (auto& r : R) r = 0;
         CPSR = 0;
         PC() = 0;
@@ -68,6 +73,7 @@ struct CPU {
     // STEP
     // -------------------------------------------------
     void step() {
+        irq.step();
         if (getFlag(T)) {
             decodeThumb(fetch16());
         }
