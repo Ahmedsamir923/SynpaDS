@@ -22,11 +22,13 @@
     <ClCompile Include="src\core\arm9\cpu.h" />
     <ClCompile Include="src\core\glad.c" />
     <ClCompile Include="src\core\memory\memory.cpp" />
+    <ClCompile Include="src\core\timers\timers.cpp" />
     <ClCompile Include="src\core\window.cpp" />
     <ClCompile Include="src\gpu\opengl_backend\opengl_renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\core\memory\memory.h" />
+    <ClInclude Include="src\core\timers\timers.h" />
     <ClInclude Include="src\gpu\gpu.h" />
     <ClInclude Include="src\gpu\gpu_renderer.h" />
     <ClInclude Include="src\gpu\opengl_backend\opengl_renderer.h" />
